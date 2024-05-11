@@ -25,8 +25,16 @@ const runningSum = arr => { // Space: O(1), time: O(n)
 };
 
 const evenNumOfChars = arr => {
-
+  // const arr = ['ab', 'abc', 'a', 'abcd']; 
+  // evenNumOfChars(arr); // => 2
   // Your code here
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length % 2 === 0) {
+      count++;
+    }
+  }
+  return count;
 };
 
 const smallerThanCurr = arr => {
