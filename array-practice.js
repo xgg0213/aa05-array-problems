@@ -1,7 +1,7 @@
 const findMinimum = arr => {
-  // const arr = [7, 5, 2, 3, 4, 1]; 
+  // const arr = [7, 5, 2, 3, 4, 1];
   // findMinimum(arr); // => 1
-  // Your code here 
+  // Your code here
   let n = Infinity;
   if (arr.length === 0) return undefined;
   for (let i = 0 ; i < arr.length; i++) { // O(n)
@@ -13,35 +13,41 @@ const findMinimum = arr => {
 };
 
 
-const runningSum = arr => {
-
-  // Your code here 
+const runningSum = arr => { // Space: O(1), time: O(n)
+  // const arr = [1,2,3,4];
+  // runningSum(arr); // => [1,3,6,10]
+  // Your code here
+  if (arr.length === 0) return [];
+  for (let i = 1 ; i < arr.length; i++) {
+    arr[i] += arr[i - 1];
+    }
+  return arr;
 };
 
 const evenNumOfChars = arr => {
 
-  // Your code here 
+  // Your code here
 };
 
 const smallerThanCurr = arr => {
 
-  // Your code here 
+  // Your code here
 
 };
 
 const twoSum = (arr, target) => {
 
-  // Your code here 
+  // Your code here
 };
 
 const secondLargest = arr => {
 
-  // Your code here 
+  // Your code here
 };
 
 const shuffle = (arr) => {
 
-  // Your code here 
+  // Your code here
 };
 
 
