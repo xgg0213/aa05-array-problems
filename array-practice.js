@@ -24,7 +24,7 @@ const runningSum = arr => { // Space: O(1), time: O(n)
   return arr;
 };
 
-const evenNumOfChars = arr => {
+const evenNumOfChars = arr => { // Space: O(1); time: O(n)
   // const arr = ['ab', 'abc', 'a', 'abcd']; 
   // evenNumOfChars(arr); // => 2
   // Your code here
