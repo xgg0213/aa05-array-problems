@@ -90,10 +90,28 @@ const secondLargest = arr => { // Space complexity: O(n), time complexity: O(n)
   return m;
 };
 
-const shuffle = (arr) => {
+const shuffle = (arr, newArr=[]) => { // Space: O(n) ; Time: O(n)
 
   // Your code here
+  
+  // base case
+  if (arr.length === 0) return newArr;
+
+  // recursion step
+  let index = Math.floor(Math.random() * arr.length); 
+  newArr.push(arr[index]);
+  arr = arr.slice(0, index).concat(arr.slice(index + 1));
+  return(shuffle(arr, newArr))
+
+
+  // step1: loop through the original array and find the current element;
+  // step2: for that current element, assign a random index into the new array;
+  // step3: lock the newly created index 
+  // step4: repeat the same process for the next element in the original array
 };
+
+
+console.log(shuffle([1,2,3]))
 
 
 module.exports = [findMinimum, runningSum, evenNumOfChars, smallerThanCurr, twoSum, secondLargest, shuffle];
