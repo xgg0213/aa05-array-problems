@@ -54,9 +54,15 @@ const smallerThanCurr = arr => { // Space: O(n), time: O(n^2)
   return result
 };
 
-const twoSum = (arr, target) => {
+const twoSum = (arr, target) => { // Space: O(1); time: O(n^2)
 
   // Your code here
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i+1; j < arr.length; j++) {
+      if ((arr[i] + arr[j]) === target) return true;
+    }
+  }
+  return false;
 };
 
 const secondLargest = arr => {
