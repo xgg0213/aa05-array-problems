@@ -65,9 +65,29 @@ const twoSum = (arr, target) => { // Space: O(1); time: O(n^2)
   return false;
 };
 
-const secondLargest = arr => {
-
+const secondLargest = arr => { // Space complexity: O(n), time complexity: O(n)
+  // const arr = [4, 2, 3, 6, 8];
+  // secondLargest(arr); // => 6
   // Your code here
+
+  let n = -Infinity;
+  let index = 0;
+  if (arr.length <= 1) return undefined;
+  for (let i = 0 ; i < arr.length; i++) { // O(n)
+    if (arr[i] > n) {
+      n = arr[i];
+      index = i;
+    }
+  }
+  let newArr = arr.slice(0, index).concat(arr.slice(index + 1));
+  let m = -Infinity;
+  if (newArr.length === 1) return newArr[0];
+  for (let i = 0 ; i < newArr.length; i++) { // O(n)
+    if (newArr[i] > m) {
+      m = newArr[i];
+    }
+  }
+  return m;
 };
 
 const shuffle = (arr) => {
