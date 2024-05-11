@@ -25,7 +25,7 @@ const runningSum = arr => { // Space: O(1), time: O(n)
 };
 
 const evenNumOfChars = arr => { // Space: O(1); time: O(n)
-  // const arr = ['ab', 'abc', 'a', 'abcd']; 
+  // const arr = ['ab', 'abc', 'a', 'abcd'];
   // evenNumOfChars(arr); // => 2
   // Your code here
   let count = 0;
@@ -37,10 +37,21 @@ const evenNumOfChars = arr => { // Space: O(1); time: O(n)
   return count;
 };
 
-const smallerThanCurr = arr => {
-
+const smallerThanCurr = arr => { // Space: O(n), time: O(n^2)
+  // const arr = [8,1,2,2,3];
+  // smallerThanCurr(arr); // => [4,0,1,1,3]
   // Your code here
-
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    let n = 0;
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] > arr[j]) {
+        n++
+      }
+    }
+    result.push(n);
+  }
+  return result
 };
 
 const twoSum = (arr, target) => {
